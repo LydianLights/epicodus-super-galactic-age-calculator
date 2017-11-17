@@ -5,13 +5,13 @@ describe("Age constructor", function() {
     let fromDate = new Date(1901, 1, 1);
     let toDate = new Date(2001, 1, 1);
     let testAge = new Age(fromDate, toDate);
-    expect(testAge._fromDate).toEqual(fromDate);
-    expect(testAge._toDate).toEqual(toDate);
+    expect(testAge.originDate).toEqual(fromDate);
+    expect(testAge.endDate).toEqual(toDate);
   });
   it("should default to 'now' if no toDate specified" , function() {
     let fromDate = new Date(1991, 5, 3);
     let testAge = new Age(fromDate);
-    expect(testAge._toDate).toEqual("now");
+    expect(testAge.endDate).toEqual("now");
   });
 });
 

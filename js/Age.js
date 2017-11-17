@@ -1,11 +1,11 @@
 export class Age {
   constructor(fromDate, toDate) {
-    this._fromDate = fromDate;
-    this._toDate = toDate || "now";
+    this.originDate = fromDate;
+    this.endDate = toDate || "now";
   }
   getInSeconds() {
-    let fromTime = this._fromDate.getTime();
-    let toTime = (this._toDate === "now") ? new Date().getTime() : this._toDate.getTime();
+    let fromTime = this.originDate.getTime();
+    let toTime = (this.endDate === "now") ? new Date().getTime() : this.endDate.getTime();
     return Math.floor((toTime - fromTime) / 1000);
   }
   getInYears() {
