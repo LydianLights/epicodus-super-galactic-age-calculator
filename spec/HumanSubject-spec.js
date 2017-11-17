@@ -42,3 +42,12 @@ describe("HumanSubject constructor", function() {
     expect(subject.healthFactors.exposureToKarmaUnitTestingTool).toEqual(false);
   });
 });
+
+describe("HumanSubject getExpectedExpirationAge", function() {
+  it("should return basline lifespan if all health factors are default" , function() {
+    let id = "0x15AC2A84E";
+    let localizedName = "Rane";
+    let originDateTime = new Date(1991, 5, 3, 20, 34, 32);
+    let subject = new HumanSubject(id, localizedName, originDateTime);
+  });
+});

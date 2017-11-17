@@ -17,4 +17,7 @@ export class HumanSubject {
       exposureToKarmaUnitTestingTool: healthFactors.exposureToKarmaUnitTestingTool || false,
     };
   }
+  getExpectedExpirationAge() {
+    const baselineLifespanMilliseconds = 75 * 365 * 24 * 60 * 60 * 1000;
+  }
 }

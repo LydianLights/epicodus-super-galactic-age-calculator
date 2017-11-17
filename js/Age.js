@@ -1,9 +1,12 @@
 export class Age {
-  constructor(birthday) {
-    this.origin = birthday;
+  constructor(fromDate, toDate) {
+    this._fromDate = fromDate;
+    this._toDate = toDate || "now";
   }
   getInSeconds() {
-    return Math.floor((new Date().getTime() - this.origin.getTime()) / 1000);
+    let fromTime = this._fromDate.getTime();
+    let toTime = (this._toDate === "now") ? new Date().getTime() : this._toDate.getTime();
+    return Math.floor((toTime - fromTime) / 1000);
   }
   getInYears() {
     return this.getInSeconds() / (60 * 60 * 24 * 365);
