@@ -25,7 +25,6 @@ class UserInfoForm {
         $("#user-info-form button[name=next-button]").show();
         $("#user-info-form button[name=submit-button]").hide();
       }
-      console.log(this.currentPage);
     }
   }
   goToNextPage() {
@@ -42,7 +41,8 @@ class UserInfoForm {
 
 $(document).ready(function() {
   let userInfoForm = new UserInfoForm();
-  $("#user-info-form button[name=next-button]").click(function() {
+  $("#user-info-form form").submit(function() {
+    event.preventDefault();
     userInfoForm.goToNextPage();
   });
   $("#user-info-form button[name=previous-button]").click(function() {
