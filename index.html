@@ -10,170 +10,178 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h1>Multi-Species Longevity Estimator</h1>
-      </div>
-      <div class="body-header">
-        <h2>Entity: #<span class="entity-id">6FE9BA</span> | Class: HUMAN</h2>
-      </div>
-      <div id="user-info-form">
-        <div class="form-header">
-          <h3>Tell us about yourself</h3>
+      <div class="main-header">
+        <div class="jumbotron">
+          <h1>Multi-Species Longevity Estimator</h1>
         </div>
-        <form action="/" method="post">
-          <input id="user-info-id" type="hidden" value="">
-          <div id="user-info-page-1">
-            <div class="form-group">
-              <label class="form-label" for="user-info-first-name">First Name</label>
-              <input class="form-control" id="user-info-first-name" name="user-info-first-name" type="text" placeholder="First Name">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="user-info-last-name">Last Name</label>
-              <input class="form-control" id="user-info-last-name" name="user-info-last-name" type="text" placeholder="Last Name">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="user-info-birthdate">Birth Date</label>
-              <small class="help-block">Please use standard Terran notation: YYYYY-MM-DD</small>
-              <input class="form-control" id="user-info-birthdate" name="user-info-birthdate" type="text" placeholder="YYYYY-MM-DD">
-            </div>
-          </div><!-- End page 1 -->
+      </div>
+      <div class="page-body">
+        <div class="body-header">
+          <h2>Entity: #<span class="entity-id">6FE9BA</span> | Class: HUMAN</h2>
+        </div>
+        <div id="user-info-form">
+          <div class="form-header">
+            <h3>Tell us about yourself</h3>
+          </div>
+          <form action="/" method="post">
+            <input id="user-info-id" type="hidden" value="">
+            <div id="user-info-page-1">
+              <div class="form-group">
+                <label class="form-label" for="user-info-first-name">First Name</label>
+                <input class="form-control" id="user-info-first-name" name="user-info-first-name" type="text" placeholder="First Name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="user-info-last-name">Last Name</label>
+                <input class="form-control" id="user-info-last-name" name="user-info-last-name" type="text" placeholder="Last Name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="user-info-birthdate">Birth Date</label>
+                <small class="help-block">Please use standard Terran notation: YYYYY-MM-DD</small>
+                <input class="form-control" id="user-info-birthdate" name="user-info-birthdate" type="text" placeholder="YYYYY-MM-DD" pattern="" required>
+              </div>
+            </div><!-- End page 1 -->
 
-          <div id="user-info-page-2" class="initially-hidden">
-            <div class="form-group">
-              <p class="survey-question">How prevalent are health problems within your immediate genetic relations?</p>
-              <div class="radio">
-                <label><input type="radio" name="user-info-hereditary-health" value="5">Very Rare</label>
+            <div id="user-info-page-2" class="initially-hidden">
+              <div class="form-group">
+                <p class="survey-question">How prevalent are health problems within your immediate genetic relations?</p>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-hereditary-health" value="5">Very Rare</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-hereditary-health" value="4">Rare</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-hereditary-health" value="3" checked="checked">Average</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-hereditary-health" value="2">Common</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-hereditary-health" value="1">Very Common</label>
+                </div>
               </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-hereditary-health" value="4">Rare</label>
+              <div class="form-group">
+                <p class="survey-question">How often do you upkeep your Mamalian physiology through strenuous use of its basic functions?</p>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-exercise" value="5">Very Often</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-exercise" value="4">Often</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-exercise" value="3" checked="checked">Sometimes</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-exercise" value="2">Occasionally</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-exercise" value="1">Very Occasionally</label>
+                </div>
               </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-hereditary-health" value="3" checked="checked">Average</label>
+              <div class="form-group">
+                <p class="survey-question">How would you rate the quality of healthcare in your region compared to galactic standards?</p>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-healthcare" value="5">Very Good</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-healthcare" value="4">Good</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-healthcare" value="3" checked="checked">Average</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-healthcare" value="2">Bad</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="user-info-healthcare" value="1">Very Bad</label>
+                </div>
               </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-hereditary-health" value="2">Common</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-hereditary-health" value="1">Very Common</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <p class="survey-question">How often do you upkeep your Mamalian physiology through strenuous use of its basic functions?</p>
-              <div class="radio">
-                <label><input type="radio" name="user-info-exercise" value="5">Very Often</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-exercise" value="4">Often</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-exercise" value="3" checked="checked">Sometimes</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-exercise" value="2">Occasionally</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-exercise" value="1">Very Occasionally</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <p class="survey-question">How would you rate the quality of healthcare in your region compared to galactic standards?</p>
-              <div class="radio">
-                <label><input type="radio" name="user-info-healthcare" value="5">Very Good</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-healthcare" value="4">Good</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-healthcare" value="3" checked="checked">Average</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-healthcare" value="2">Bad</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-healthcare" value="1">Very Bad</label>
-              </div>
-            </div>
-          </div><!-- End page 2 -->
+            </div><!-- End page 2 -->
 
-          <div id="user-info-page-3" class="initially-hidden">
-            <div class="form-group">
-              <label class="form-label" for="user-info-smoker">Do you recreationally smoke the dried remains of any of your planet's various photosynthetic life-forms?</label>
-              <select class="form-control" id="user-info-smoker" name="user-info-smoker">
-                <option value="false">No</option>
-                <option value="true">Yes</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="user-info-alcohol-dependency">How often do you recreationally consume diluted solutions of ethanol (a substance known to inhibit the psychological awareness of your species)?</label>
-              <select class="form-control" id="user-info-alcohol-dependency" name="user-info-alcohol-dependency">
-                <option value="0.00">Never</option>
-                <option value="0.05">Once per year</option>
-                <option value="0.10">Once per month</option>
-                <option value="0.25">Once per week</option>
-                <option value="0.60">A few times per week</option>
-                <option value="0.80">Once per day</option>
-                <option value="1.00">I maintain an intravenous delivery system</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="user-info-radiation-exposure">How often do you come into contact with the irradiated areas of your planet--specifically those areas affected by The Event?</label>
-              <select class="form-control" id="user-info-radiation-exposure" name="user-info-radiation-exposure">
-                <option value="0.00">Never</option>
-                <option value="0.05">Once per year</option>
-                <option value="0.10">Once per month</option>
-                <option value="0.25">Once per week</option>
-                <option value="0.60">A few times per week</option>
-                <option value="0.80">Once per day</option>
-                <option value="1.00">I am consistantly irradiated on a daily basis</option>
-              </select>
-            </div>
-          </div><!-- End page 3 -->
+            <div id="user-info-page-3" class="initially-hidden">
+              <div class="form-group">
+                <label class="form-label" for="user-info-smoker">Do you recreationally smoke the dried remains of any of your planet's various photosynthetic life-forms?</label>
+                <select class="form-control" id="user-info-smoker" name="user-info-smoker">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="user-info-alcohol-dependency">How often do you recreationally consume diluted solutions of ethanol (a substance known to inhibit the psychological awareness of your species)?</label>
+                <select class="form-control" id="user-info-alcohol-dependency" name="user-info-alcohol-dependency">
+                  <option value="0.00">Never</option>
+                  <option value="0.05">Once per year</option>
+                  <option value="0.10">Once per month</option>
+                  <option value="0.25">Once per week</option>
+                  <option value="0.60">A few times per week</option>
+                  <option value="0.80">Once per day</option>
+                  <option value="1.00">I maintain an intravenous delivery system</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="user-info-radiation-exposure">How often do you come into contact with the irradiated areas of your planet--specifically those areas affected by The Event?</label>
+                <select class="form-control" id="user-info-radiation-exposure" name="user-info-radiation-exposure">
+                  <option value="0.00">Never</option>
+                  <option value="0.05">Once per year</option>
+                  <option value="0.10">Once per month</option>
+                  <option value="0.25">Once per week</option>
+                  <option value="0.60">A few times per week</option>
+                  <option value="0.80">Once per day</option>
+                  <option value="1.00">I am consistantly irradiated on a daily basis</option>
+                </select>
+              </div>
+            </div><!-- End page 3 -->
 
-          <div id="user-info-page-4" class="initially-hidden">
-            <div class="form-group">
-              <label class="form-label" for="user-info-immune-system-cybernetics">Have you been outfitted with immune-enhancing nanotechnological cybernetics?</label>
-              <select class="form-control" id="user-info-immune-system-cybernetics" name="user-info-immune-system-cybernetics">
-                <option value="false">No</option>
-                <option value="true">Yes</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="user-info-universal-collective">Has your consciousness been transferred via the Intergalactic Collective Upload Program (ICUP) following the recent advancement of your species into the technological singularity?</label>
-              <select class="form-control" id="user-info-universal-collective" name="user-info-universal-collective">
-                <option value="false">No</option>
-                <option value="true">Yes</option>
-              </select>
-            </div>
-          </div><!-- End page 4 -->
+            <div id="user-info-page-4" class="initially-hidden">
+              <div class="form-group">
+                <label class="form-label" for="user-info-immune-system-cybernetics">Have you been outfitted with immune-enhancing nanotechnological cybernetics?</label>
+                <select class="form-control" id="user-info-immune-system-cybernetics" name="user-info-immune-system-cybernetics">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="user-info-universal-collective">Has your consciousness been transferred via the Intergalactic Collective Upload Program (ICUP) following the recent advancement of your species into the technological singularity?</label>
+                <select class="form-control" id="user-info-universal-collective" name="user-info-universal-collective">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+                </select>
+              </div>
+            </div><!-- End page 4 -->
 
-          <div id="user-info-page-5" class="initially-hidden">
-            <div class="form-group">
-              <label class="form-label" for="user-info-karma">Have you had experience trying to operate the Karma unit testing tool and understand the logic (or lack thereof) of its failure messages and behaviors?</label>
-              <select class="form-control" id="user-info-karma" name="user-info-karma">
-                <option value="false">No</option>
-                <option value="true">Yes</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="user-semicolon-stress">How many hours per week do you spend looking deeply into your codebase, following every twisting trail of interconnected logic, painstakingly verifying the validity of your reasoning only to find that you actually only forgot a semicolon (or similar)?</label>
-              <select class="form-control" id="user-semicolon-stress" name="user-semicolon-stress">
-                <option value="0.00">I don't code</option>
-                <option value="0.05">Very occasionally (yeah, right)</option>
-                <option value="0.10">Less than one hour per week</option>
-                <option value="0.25">About one hour per week</option>
-                <option value="0.60">A few hours per week</option>
-                <option value="0.80">About an hour per day</option>
-                <option value="1.00">I am in a consistant state of mental degeneration</option>
-              </select>
-            </div>
-          </div><!-- End page 5 -->
+            <div id="user-info-page-5" class="initially-hidden">
+              <div class="form-group">
+                <label class="form-label" for="user-info-karma">Have you had experience trying to operate the Karma unit testing tool and understand the logic (or lack thereof) of its failure messages and behaviors?</label>
+                <select class="form-control" id="user-info-karma" name="user-info-karma">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="user-semicolon-stress">How many hours per week do you spend looking deeply into your codebase, following every twisting trail of interconnected logic, painstakingly verifying the validity of your reasoning only to find that you actually only forgot a semicolon (or similar)?</label>
+                <select class="form-control" id="user-semicolon-stress" name="user-semicolon-stress">
+                  <option value="0.00">I don't code</option>
+                  <option value="0.05">Very occasionally (yeah, right)</option>
+                  <option value="0.10">Less than one hour per week</option>
+                  <option value="0.25">About one hour per week</option>
+                  <option value="0.60">A few hours per week</option>
+                  <option value="0.80">About an hour per day</option>
+                  <option value="1.00">I am in a consistant state of mental degeneration</option>
+                </select>
+              </div>
+            </div><!-- End page 5 -->
 
-          <button class="btn btn-lg btn-success" type="submit" name="next-page-button">Submit</button>
-          <button class="btn btn-lg btn-info" type="button" name="next-page-button">Next</button>
-          <button class="btn btn-lg btn-default" type="button" name="next-page-button">Back</button>
-        </form>
-      </div><!-- End user-info form -->
+            <button class="btn btn-lg btn-success initially-hidden" type="submit" name="submit-button">Submit</button>
+            <button class="btn btn-lg btn-info" type="button" name="next-button">Next</button>
+            <button class="btn btn-lg btn-default initially-hidden" type="button" name="previous-button">Back</button>
+          </form>
+        </div><!-- End user-info form -->
 
-    </div>
+        <div id="results">
+          <h2>Results</h2>
+        </div>
+
+      </div><!-- End body -->
+    </div><!-- End container -->
   </body>
 </html>
