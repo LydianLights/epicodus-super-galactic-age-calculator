@@ -43,6 +43,8 @@ class Page {
   }
   showResults() {
     console.log(this.results);
+    $("#user-info-form").slideUp();
+    $("#results").slideDown();
   }
 }
 
