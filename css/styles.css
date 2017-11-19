@@ -1,3 +1,7 @@
 .initially-hidden {
   display: none;
 }
+
+.error {
+  display: none;
+}

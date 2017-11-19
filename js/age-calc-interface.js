@@ -53,11 +53,25 @@ class Page {
     $("#results").slideDown();
   }
   showResultsMain() {
-    $(".results-earth-age").text(this.results.humanSubject.getCurrentAge().getInYears().toFixed(2));
-    $(".results-earth-life-expectancy").text(this.results.humanSubject.getExpectedExpirationAge().getInYears().toFixed(2));
+    let age = this.results.humanSubject.getCurrentAge().getInYears();
+    if (age < 0) {
+      $(".results-age-error").show();
+    }
+    $(".results-earth-age").text(age.toFixed(2));
+
+    let lifeExpectancy = this.results.humanSubject.getExpectedExpirationAge().getInYears();
+    console.log(lifeExpectancy);
+    if (lifeExpectancy < 0) {
+      console.log("yes");
+      $(".results-life-expectancy-error").show();
+    }
+    $(".results-earth-life-expectancy").text(lifeExpectancy.toFixed(2));
   }
   showResultsRemainingTime() {
     let remainingTime = this.results.humanSubject.getRemainingAge().getInYears().toFixed(2);
+    if (remainingTime <= 0) {
+      $(".results-remaining-time-error").show();
+    }
     $(".results-remaining-time").text(remainingTime);
   }
   showResultsConversionTable() {
