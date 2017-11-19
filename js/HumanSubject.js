@@ -43,4 +43,7 @@ export class HumanSubject {
   getRemainingAge() {
     return new Age("now", this.getExpectedExpirationAge().endDate);
   }
+  static generateRandomId() {
+    return Math.floor(0xFFFFFF * Math.random()).toString(16);
+  }
 }

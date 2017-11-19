@@ -3,7 +3,7 @@ import { Age } from "./../js/Age.js";
 
 class Page {
   constructor() {
-    this.id = "6FE9BA";
+    this.id = HumanSubject.generateRandomId().toUpperCase();
     this.userInfoForm = new UserInfoForm();
     this.results = null;
     this.onLoad();
@@ -60,9 +60,7 @@ class Page {
     $(".results-earth-age").text(age.toFixed(2));
 
     let lifeExpectancy = this.results.humanSubject.getExpectedExpirationAge().getInYears();
-    console.log(lifeExpectancy);
     if (lifeExpectancy < 0) {
-      console.log("yes");
       $(".results-life-expectancy-error").show();
     }
     $(".results-earth-life-expectancy").text(lifeExpectancy.toFixed(2));
