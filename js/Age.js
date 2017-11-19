@@ -12,10 +12,10 @@ export class Age {
     return this.getInSeconds() / (60 * 60 * 24 * 365);
   }
   getInMercuryYears() {
-    return this.getInYears() / .24;
+    return this.getInYears() / 0.24;
   }
   getInVenusYears() {
-    return this.getInYears() / .62;
+    return this.getInYears() / 0.62;
   }
   getInMarsYears() {
     return this.getInYears() / 1.88;

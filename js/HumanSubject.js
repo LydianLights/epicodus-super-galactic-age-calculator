@@ -1,4 +1,4 @@
-import { Age } from "./../js/Age.js"
+import { Age } from "./../js/Age.js";
 
 export class HumanSubject {
   constructor(id, localizedName, originDateTime, healthFactors) {

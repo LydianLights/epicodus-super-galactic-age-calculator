@@ -1,5 +1,5 @@
-import { HumanSubject } from "./../js/HumanSubject.js"
-import { Age } from "./../js/Age.js"
+import { HumanSubject } from "./../js/HumanSubject.js";
+import { Age } from "./../js/Age.js";
 
 class Page {
   constructor() {

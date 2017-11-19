@@ -1,5 +1,5 @@
-import { HumanSubject } from "./../js/HumanSubject.js"
-import { Age } from "./../js/Age.js"
+import { HumanSubject } from "./../js/HumanSubject.js";
+import { Age } from "./../js/Age.js";
 
 describe("HumanSubject constructor", function() {
   it("should describe a new human with an id, localized name, origin date, and health factors" , function() {
