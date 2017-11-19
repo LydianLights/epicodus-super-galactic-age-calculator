@@ -22,9 +22,14 @@ describe("Age getInSeconds", function() {
     let testAge = new Age(fromDate, toDate);
     expect(testAge.getInSeconds()).toEqual(3155760000);
   });
+  it("should calculate the age relative to today if start time is 'now'" , function() {
+    let birthday = new Date(2117, 1, 1);
+    let testAge = new Age("now", birthday);
+    expect(testAge.getInSeconds()).not.toBeGreaterThan(3130489592);
+  });
   it("should calculate the age relative to today if end time is 'now'" , function() {
     let birthday = new Date(1991, 5, 3);
-    let testAge = new Age(birthday);
+    let testAge = new Age(birthday, "now");
     expect(testAge.getInSeconds()).not.toBeLessThan(835007306);
   });
 });

@@ -19,6 +19,9 @@ export class HumanSubject {
       exposureToKarmaUnitTestingTool: healthFactors.exposureToKarmaUnitTestingTool || false,
     };
   }
+  getCurrentAge() {
+    return new Age(this.originDateTime);
+  }
   getExpectedExpirationAge() {
     const baselineLifespan = 75;
 
@@ -36,5 +39,8 @@ export class HumanSubject {
 
     let expirationDate = new Date(this.originDateTime.getTime() + lifespan * 365 * 24 * 60 * 60 * 1000);
     return new Age(this.originDateTime, expirationDate);
+  }
+  getRemainingAge() {
+    return new Age("now", this.getExpectedExpirationAge().endDate);
   }
 }

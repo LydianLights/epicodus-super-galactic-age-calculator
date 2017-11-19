@@ -4,7 +4,7 @@ export class Age {
     this.endDate = toDate || "now";
   }
   getInSeconds() {
-    let fromTime = this.originDate.getTime();
+    let fromTime = (this.originDate === "now") ? new Date().getTime() : this.originDate.getTime();
     let toTime = (this.endDate === "now") ? new Date().getTime() : this.endDate.getTime();
     return Math.floor((toTime - fromTime) / 1000);
   }

@@ -6,9 +6,10 @@ class Page {
     this.id = "6FE9BA";
     this.userInfoForm = new UserInfoForm();
     this.results = null;
-    this.initialize();
+    this.onLoad();
   }
-  initialize() {
+  onLoad() {
+    this.showUserId();
     $("#user-info-form form").submit(function() {
       event.preventDefault();
       this.userInfoForm.goToNextPage();
@@ -41,8 +42,23 @@ class Page {
     let subject = new HumanSubject(id, localizedName, birthdate, healthFactors);
     this.results = new Results(subject);
   }
+  showUserId() {
+    $(".entity-id").text(this.id);
+  }
   showResults() {
-    console.log(this.results);
+    let remainingTime = this.results.humanSubject.getRemainingAge().getInYears().toFixed(2);
+    $(".results-earth-age").text(this.results.humanSubject.getCurrentAge().getInYears().toFixed(2));
+    $(".results-earth-life-expectancy").text(this.results.humanSubject.getExpectedExpirationAge().getInYears().toFixed(2));
+    $(".results-remaining-time").text(remainingTime);
+
+    $(".results-mercury-age").text(this.results.humanSubject.getCurrentAge().getInMercuryYears().toFixed(2));
+    $(".results-mercury-life-expectancy").text(this.results.humanSubject.getExpectedExpirationAge().getInMercuryYears().toFixed(2));
+    $(".results-venus-age").text(this.results.humanSubject.getCurrentAge().getInVenusYears().toFixed(2));
+    $(".results-venus-life-expectancy").text(this.results.humanSubject.getExpectedExpirationAge().getInVenusYears().toFixed(2));
+    $(".results-mars-age").text(this.results.humanSubject.getCurrentAge().getInMarsYears().toFixed(2));
+    $(".results-mars-life-expectancy").text(this.results.humanSubject.getExpectedExpirationAge().getInMarsYears().toFixed(2));
+    $(".results-jupiter-age").text(this.results.humanSubject.getCurrentAge().getInJupiterYears().toFixed(2));
+    $(".results-jupiter-life-expectancy").text(this.results.humanSubject.getExpectedExpirationAge().getInJupiterYears().toFixed(2));
     $("#user-info-form").slideUp();
     $("#results").slideDown();
   }

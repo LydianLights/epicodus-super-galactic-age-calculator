@@ -119,3 +119,23 @@ describe("HumanSubject getExpectedExpirationAge", function() {
     expect(expirationAge.getInYears()).toEqual(63);
   });
 });
+
+describe("HumanSubject getCurrentAge", function() {
+  it("should return the current age of the subject" , function() {
+    let id = "0x15AC2A84E";
+    let localizedName = "Rane";
+    let originDateTime = new Date(1991, 5, 3, 20, 34, 32);
+    let subject = new HumanSubject(id, localizedName, originDateTime);
+    expect(subject.getCurrentAge().getInYears()).not.toBeLessThan(26);
+  });
+});
+
+describe("HumanSubject getRemainingAge", function() {
+  it("should return the remaining age of the subject" , function() {
+    let id = "0x15AC2A84E";
+    let localizedName = "Rane";
+    let originDateTime = new Date(1991, 5, 3, 20, 34, 32);
+    let subject = new HumanSubject(id, localizedName, originDateTime);
+    expect(subject.getRemainingAge().getInYears()).not.toBeGreaterThan(49);
+  });
+});
