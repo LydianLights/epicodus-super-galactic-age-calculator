@@ -46,7 +46,7 @@ describe("Age getInMercuryYears", function() {
   it("should calculate the age in mercury years" , function() {
     let birthday = new Date(1991, 5, 3);
     let testAge = new Age(birthday);
-    expect(testAge.getInMercuryYears()).not.toBeLessThan(26 * .24);
+    expect(testAge.getInMercuryYears()).not.toBeLessThan(26 / .24);
   });
 });
 
@@ -54,7 +54,7 @@ describe("Age getInVenusYears", function() {
   it("should calculate the age in venus years" , function() {
     let birthday = new Date(1991, 5, 3);
     let testAge = new Age(birthday);
-    expect(testAge.getInVenusYears()).not.toBeLessThan(26 * .62);
+    expect(testAge.getInVenusYears()).not.toBeLessThan(26 / .62);
   });
 });
 
@@ -62,7 +62,7 @@ describe("Age getInMarsYears", function() {
   it("should calculate the age in mars years" , function() {
     let birthday = new Date(1991, 5, 3);
     let testAge = new Age(birthday);
-    expect(testAge.getInMarsYears()).not.toBeLessThan(26 * 1.88);
+    expect(testAge.getInMarsYears()).not.toBeLessThan(26 / 1.88);
   });
 });
 
@@ -70,6 +70,6 @@ describe("Age getInJupiterYears", function() {
   it("should calculate the age in jupiter years" , function() {
     let birthday = new Date(1991, 5, 3);
     let testAge = new Age(birthday);
-    expect(testAge.getInJupiterYears()).not.toBeLessThan(26 * 11.86);
+    expect(testAge.getInJupiterYears()).not.toBeLessThan(26 / 11.86);
   });
 });
