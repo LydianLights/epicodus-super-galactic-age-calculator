@@ -46,11 +46,21 @@ class Page {
     $(".entity-id").text(this.id);
   }
   showResults() {
-    let remainingTime = this.results.humanSubject.getRemainingAge().getInYears().toFixed(2);
+    this.showResultsMain();
+    this.showResultsRemainingTime();
+    this.showResultsConversionTable();
+    $("#user-info-form").slideUp();
+    $("#results").slideDown();
+  }
+  showResultsMain() {
     $(".results-earth-age").text(this.results.humanSubject.getCurrentAge().getInYears().toFixed(2));
     $(".results-earth-life-expectancy").text(this.results.humanSubject.getExpectedExpirationAge().getInYears().toFixed(2));
+  }
+  showResultsRemainingTime() {
+    let remainingTime = this.results.humanSubject.getRemainingAge().getInYears().toFixed(2);
     $(".results-remaining-time").text(remainingTime);
-
+  }
+  showResultsConversionTable() {
     $(".results-mercury-age").text(this.results.humanSubject.getCurrentAge().getInMercuryYears().toFixed(2));
     $(".results-mercury-life-expectancy").text(this.results.humanSubject.getExpectedExpirationAge().getInMercuryYears().toFixed(2));
     $(".results-venus-age").text(this.results.humanSubject.getCurrentAge().getInVenusYears().toFixed(2));
@@ -59,8 +69,6 @@ class Page {
     $(".results-mars-life-expectancy").text(this.results.humanSubject.getExpectedExpirationAge().getInMarsYears().toFixed(2));
     $(".results-jupiter-age").text(this.results.humanSubject.getCurrentAge().getInJupiterYears().toFixed(2));
     $(".results-jupiter-life-expectancy").text(this.results.humanSubject.getExpectedExpirationAge().getInJupiterYears().toFixed(2));
-    $("#user-info-form").slideUp();
-    $("#results").slideDown();
   }
 }
 
