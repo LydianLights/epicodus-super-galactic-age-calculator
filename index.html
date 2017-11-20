@@ -4,16 +4,15 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="build/css/vendor.css">
     <link rel="stylesheet" href="build/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Iceberg" rel="stylesheet">
     <script src="build/js/vendor.min.js"></script>
     <script src="build/js/app.js"></script>
     <title>Multi-Species Longevity Estimator</title>
   </head>
   <body>
     <div class="container">
-      <div class="main-header">
-        <div class="jumbotron">
-          <h1>Multi-Species Longevity Estimator</h1>
-        </div>
+      <div class="page-header jumbotron">
+        <h1>Multi-Species<br>Longevity Estimator</h1>
       </div>
       <div class="page-body">
         <div class="body-header">
@@ -21,7 +20,7 @@
         </div>
         <div id="user-info-form">
           <div class="form-header">
-            <h3>Tell us about yourself</h3>
+            <h3>Please enter your bio-socialogical data</h3>
           </div>
           <input id="user-info-id" type="hidden" value="">
           <form id="user-info-page-1">
@@ -38,66 +37,66 @@
               <small class="help-block">Please use standard Terran notation: YYYYY-MM-DD</small>
               <input class="form-control" id="user-info-birthdate" name="user-info-birthdate" type="text" placeholder="YYYYY-MM-DD" pattern="\d\d\d\d\d-[01]\d-[0-3]\d" required>
             </div>
-            <button class="btn btn-lg btn-info" type="submit" name="next-button">Next</button>
+            <button class="btn btn-lg btn-next" type="submit" name="next-button">Next</button>
           </form><!-- End page 1 -->
 
           <form id="user-info-page-2" class="initially-hidden">
             <div class="form-group">
-              <p class="survey-question">How prevalent are health problems within your immediate genetic relations?</p>
+              <label class="form-label">How prevalent are health problems within your immediate genetic relations?</label>
               <div class="radio">
-                <label><input type="radio" name="user-info-hereditary-health" value="5">Very Rare</label>
+                <label class="form-label"><input type="radio" name="user-info-hereditary-health" value="5">Very Rare</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="user-info-hereditary-health" value="4">Rare</label>
+                <label class="form-label"><input type="radio" name="user-info-hereditary-health" value="4">Rare</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="user-info-hereditary-health" value="3" checked="checked">Average</label>
+                <label class="form-label"><input type="radio" name="user-info-hereditary-health" value="3" checked="checked">Average</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="user-info-hereditary-health" value="2">Common</label>
+                <label class="form-label"><input type="radio" name="user-info-hereditary-health" value="2">Common</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="user-info-hereditary-health" value="1">Very Common</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <p class="survey-question">How often do you upkeep your Mamalian physiology through strenuous use of its basic functions?</p>
-              <div class="radio">
-                <label><input type="radio" name="user-info-exercise" value="5">Very Often</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-exercise" value="4">Often</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-exercise" value="3" checked="checked">Sometimes</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-exercise" value="2">Occasionally</label>
-              </div>
-              <div class="radio">
-                <label><input type="radio" name="user-info-exercise" value="1">Very Occasionally</label>
+                <label class="form-label"><input type="radio" name="user-info-hereditary-health" value="1">Very Common</label>
               </div>
             </div>
             <div class="form-group">
-              <p class="survey-question">How would you rate the quality of healthcare in your region compared to galactic standards?</p>
+              <label class="form-label">How often do you upkeep your Mamalian physiology through strenuous use of its basic functions?</label>
               <div class="radio">
-                <label><input type="radio" name="user-info-healthcare" value="5">Very Good</label>
+                <label class="form-label"><input type="radio" name="user-info-exercise" value="5">Very Often</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="user-info-healthcare" value="4">Good</label>
+                <label class="form-label"><input type="radio" name="user-info-exercise" value="4">Often</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="user-info-healthcare" value="3" checked="checked">Average</label>
+                <label class="form-label"><input type="radio" name="user-info-exercise" value="3" checked="checked">Sometimes</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="user-info-healthcare" value="2">Bad</label>
+                <label class="form-label"><input type="radio" name="user-info-exercise" value="2">Occasionally</label>
               </div>
               <div class="radio">
-                <label><input type="radio" name="user-info-healthcare" value="1">Very Bad</label>
+                <label class="form-label"><input type="radio" name="user-info-exercise" value="1">Very Occasionally</label>
               </div>
             </div>
-            <button class="btn btn-lg btn-info" type="submit" name="next-button">Next</button>
-            <button class="btn btn-lg btn-default" type="button" name="previous-button">Back</button>
+            <div class="form-group">
+              <label class="form-label">How would you rate the quality of healthcare in your region compared to galactic standards?</label>
+              <div class="radio">
+                <label class="form-label"><input type="radio" name="user-info-healthcare" value="5">Very Good</label>
+              </div>
+              <div class="radio">
+                <label class="form-label"><input type="radio" name="user-info-healthcare" value="4">Good</label>
+              </div>
+              <div class="radio">
+                <label class="form-label"><input type="radio" name="user-info-healthcare" value="3" checked="checked">Average</label>
+              </div>
+              <div class="radio">
+                <label class="form-label"><input type="radio" name="user-info-healthcare" value="2">Bad</label>
+              </div>
+              <div class="radio">
+                <label class="form-label"><input type="radio" name="user-info-healthcare" value="1">Very Bad</label>
+              </div>
+            </div>
+            <button class="btn btn-lg btn-next" type="submit" name="next-button">Next</button>
+            <button class="btn btn-lg btn-back" type="button" name="previous-button">Back</button>
           </form><!-- End page 2 -->
 
           <form id="user-info-page-3" class="initially-hidden">
@@ -132,8 +131,8 @@
                 <option value="1.00">I am consistantly irradiated on a daily basis</option>
               </select>
             </div>
-            <button class="btn btn-lg btn-info" type="submit" name="next-button">Next</button>
-            <button class="btn btn-lg btn-default" type="button" name="previous-button">Back</button>
+            <button class="btn btn-lg btn-next" type="submit" name="next-button">Next</button>
+            <button class="btn btn-lg btn-back" type="button" name="previous-button">Back</button>
           </form><!-- End page 3 -->
 
           <form id="user-info-page-4" class="initially-hidden">
@@ -151,8 +150,8 @@
                 <option value="true">Yes</option>
               </select>
             </div>
-            <button class="btn btn-lg btn-info" type="submit" name="next-button">Next</button>
-            <button class="btn btn-lg btn-default" type="button" name="previous-button">Back</button>
+            <button class="btn btn-lg btn-next" type="submit" name="next-button">Next</button>
+            <button class="btn btn-lg btn-back" type="button" name="previous-button">Back</button>
           </form><!-- End page 4 -->
 
           <form id="user-info-page-5" class="initially-hidden">
@@ -175,18 +174,14 @@
                 <option value="1.00">I am in a consistant state of mental degeneration</option>
               </select>
             </div>
-            <button class="btn btn-lg btn-success" type="submit" name="submit-button">Submit</button>
-            <button class="btn btn-lg btn-default" type="button" name="previous-button">Back</button>
+            <button class="btn btn-lg btn-submit" type="submit" name="submit-button">Submit</button>
+            <button class="btn btn-lg btn-back" type="button" name="previous-button">Back</button>
           </form><!-- End page 5 -->
         </div><!-- End user-info form -->
 
         <div id="results" class="initially-hidden">
           <h2>Results</h2>
-          <p>Your current age: <span class="results-earth-age"></span></p>
-          <p class="error results-age-error">Sorry, our system is not currently optimized for time travelers. Please travel to the nearest future where reverse causality is supported.</p>
-          <p>Predicted maximum age: <span class="results-earth-life-expectancy"></span></p>
-          <p class="error results-life-expectancy-error">Unfortunately it appears you died before you were born. We apologize for any inconvinience this may have caused.</p>
-          <div class="well">
+          <div class="well results-panel">
             <h3>You have</h3>
             <h2><span class="results-remaining-time"></span></h2>
             <h3>years left to live.</h3>
@@ -197,81 +192,64 @@
               <iframe width="560" height="315" src="https://www.youtube.com/embed/9pPQnhhUqtU?rel=0" frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
-          <h3>Some useful conversions for your local system</h3>
+          <div class="results-info">
+            <h2>Info</h2>
+            <h4>Your current age: <span class="results-earth-age"></span></h4>
+            <p class="error results-age-error">Sorry, our system is not currently optimized for time travelers. Please travel to the nearest future where reverse causality is supported.</p>
+            <h4>Predicted maximum age: <span class="results-earth-life-expectancy"></span></h4>
+            <p class="error results-life-expectancy-error">Unfortunately it appears you died before you were born. We apologize for any inconvinience this may have caused.</p>
+          </div>
           <div id="results-conversions" class="panel-group">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#results-conversions" href="#results-conversions-mercury">Mercury</a>
-                </h4>
-              </div>
+            <h2>Some useful conversions for your local system</h2>
+            <div class="panel">
+              <a data-toggle="collapse" data-parent="#results-conversions" href="#results-conversions-mercury">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Mercury</h3>
+                </div>
+              </a>
               <div id="results-conversions-mercury" class="panel-collapse collapse">
                 <div class="panel-body">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <p>Current age: <span class="results-mercury-age"></span></p>
-                    </div>
-                    <div class="col-sm-6">
-                      <p>Expiration age: <span class="results-mercury-life-expectancy"></span></p>
-                    </div>
-                  </div>
+                  <h4>Current age: <span class="results-mercury-age"></span></h4>
+                  <h4>Expiration age: <span class="results-mercury-life-expectancy"></span></h4>
                 </div>
               </div>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#results-conversions" href="#results-conversions-venus">Venus</a>
-                </h4>
-              </div>
+            <div class="panel">
+              <a data-toggle="collapse" data-parent="#results-conversions" href="#results-conversions-venus">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Venus</h3>
+                </div>
+              </a>
               <div id="results-conversions-venus" class="panel-collapse collapse">
                 <div class="panel-body">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <p>Current age: <span class="results-venus-age"></span></p>
-                    </div>
-                    <div class="col-sm-6">
-                      <p>Expiration age: <span class="results-venus-life-expectancy"></span></p>
-                    </div>
-                  </div>
+                  <h4>Current age: <span class="results-venus-age"></span></h4>
+                  <h4>Expiration age: <span class="results-venus-life-expectancy"></span></h4>
                 </div>
               </div>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#results-conversions" href="#results-conversions-mars">Mars</a>
-                </h4>
-              </div>
+            <div class="panel">
+              <a data-toggle="collapse" data-parent="#results-conversions" href="#results-conversions-mars">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Mars</h3>
+                </div>
+              </a>
               <div id="results-conversions-mars" class="panel-collapse collapse">
                 <div class="panel-body">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <p>Current age: <span class="results-mars-age"></span></p>
-                    </div>
-                    <div class="col-sm-6">
-                      <p>Expiration age: <span class="results-mars-life-expectancy"></span></p>
-                    </div>
-                  </div>
+                  <h4>Current age: <span class="results-mars-age"></span></h4>
+                  <h4>Expiration age: <span class="results-mars-life-expectancy"></span></h4>
                 </div>
               </div>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#results-conversions" href="#results-conversions-jupiter">Jupiter</a>
-                </h4>
-              </div>
+            <div class="panel">
+              <a data-toggle="collapse" data-parent="#results-conversions" href="#results-conversions-jupiter">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Jupiter</h3>
+                </div>
+              </a>
               <div id="results-conversions-jupiter" class="panel-collapse collapse">
                 <div class="panel-body">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <p>Current age: <span class="results-jupiter-age"></span></p>
-                    </div>
-                    <div class="col-sm-6">
-                      <p>Expiration age: <span class="results-jupiter-life-expectancy"></span></p>
-                    </div>
-                  </div>
+                  <h4>Current age: <span class="results-jupiter-age"></span></h4>
+                  <h4>Expiration age: <span class="results-jupiter-life-expectancy"></span></h4>
                 </div>
               </div>
             </div>

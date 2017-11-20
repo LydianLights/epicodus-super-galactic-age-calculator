@@ -109,7 +109,7 @@ gulp.task("jsWatch", ["buildJS", "jshint"], function() {
   browserSync.reload();
 });
 gulp.task("cssWatch", ["buildCSS"], function() {
-  browserSync.reload();
+  browserSync.reload("build/css/styles.css");
 });
 gulp.task("htmlWatch", function() {
   browserSync.reload();

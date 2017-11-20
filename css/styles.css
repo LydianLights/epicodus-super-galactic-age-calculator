@@ -1,7 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Iceberg', sans-serif;
+  color: white;
+  background-color: black;
+  background-image: url("./../../img/bg.jpg");
+}
+
 .initially-hidden {
   display: none;
 }
 
+.container {
+  opacity: .9;
+  background-color: black;
+  min-height: 100vh;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 70px;
+}
+
+.well {
+  background-color: black;
+}
+
+.panel {
+  border-radius: 0px !important;
+}
+
+.panel > a {
+  text-decoration: none !important;
+}
+.panel > a:hover {
+  text-decoration: none !important;
+}
+
+.panel > a > .panel-heading:hover {
+  background-color: #dddddd;
+}
+
+.panel-heading {
+  color: black !important;
+}
+
+.panel-body {
+  background-color: black;
+}
+
+.page-header {
+  text-align: center;
+  font-family: 'Bungee Inline', sans-serif;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: black;
+  border-radius: 0px !important;
+}
+
+.form-group {
+  margin-top: 30px;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.form-control {
+  font-size: 16px;
+  border-radius: 0px;
+  font-weight: bold;
+}
+
+#user-info-form input[type=text] {
+  max-width: 500px;
+}
+
+#user-info-form select {
+  margin-top: 5px;
+  max-width: 150px;
+}
+
+.btn {
+  border-radius: 2px;
+}
+
+#user-info-form .btn {
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.btn-next {
+  color: black !important;
+  background-color: white;
+}
+.btn-next:hover {
+  color: black !important;
+  background-color: #dddddd;
+}
+.btn-back {
+  color: white !important;
+  background-color: black;
+  border-color: white;
+}
+.btn-back:hover {
+  color: white !important;
+  background-color: #282828;
+}
+.btn-submit {
+  color: black !important;
+  background-color: #a1e570;
+}
+.btn-submit:hover {
+  color: black !important;
+  background-color: #6f9e4d;
+}
+
 .error {
   display: none;
+}
+
+p.error {
+  color: #e23f3f;
+  font-size: 14px !important;
+}
+
+.results-panel {
+  text-align: center;
+  padding-top: 0px;
+}
+
+.results-info p {
+  font-size: 18px;
+}
+
+.results-panel h2 {
+  font-size: 70px;
+}
+
+.results-remaining-time-error iframe {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#results-conversions .panel-title {
+  font-size: 24px;
 }
